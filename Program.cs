@@ -1,72 +1,54 @@
-﻿using System;
+using System;
 
 class Program
 {
     static void Main()
     {
-        // Ініціалізація двох матриць
-        int[,] matrixA = {
+        // Створимо початковий масив 4x4
+        int[,] array = {
             { 1, 2, 3, 4 },
             { 5, 6, 7, 8 },
             { 9, 10, 11, 12 },
             { 13, 14, 15, 16 }
         };
-
-        int[,] matrixB = {
-            { 16, 15, 14, 13 },
-            { 12, 11, 10, 9 },
-            { 8, 7, 6, 5 },
-            { 4, 3, 2, 1 }
-        };
-
-        // Додавання матриць
-        int[,] sumMatrix = AddMatrices(matrixA, matrixB);
-        Console.WriteLine("Сума матриць:");
-        PrintMatrix(sumMatrix);
-
-        // Множення матриць
-        int[,] productMatrix = MultiplyMatrices(matrixA, matrixB);
-        Console.WriteLine("\nДобуток матриць:");
-        PrintMatrix(productMatrix);
+        
+        // Виклик функції ArrayModify
+        int[,] modifiedArray = ArrayModify(array);
+        
+        // Виведемо результат
+        PrintArray(modifiedArray);
     }
 
-    static int[,] AddMatrices(int[,] a, int[,] b)
+    static int[,] ArrayModify(int[,] a)
     {
-        int[,] result = new int[4, 4];
+        int[,] newArray = a;
         for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < 4; j++)
             {
-                result[i, j] = a[i, j] + b[i, j];
+                if (i == j)
+                    newArray[i,j] = 0;
             }
         }
-        return result;
-    }
-
-    static int[,] MultiplyMatrices(int[,] a, int[,] b)
-    {
-        int[,] result = new int[4, 4];
+        
         for (int i = 0; i < 4; i++)
         {
             for (int j = 0; j < 4; j++)
             {
-                result[i, j] = 0; // Ініціалізація для накопичення
-                for (int k = 0; k < 4; k++)
-                {
-                    result[i, j] += a[i, k] * b[k, j];
-                }
+                if (i + j == 3)
+                    newArray[i,j] = 1;
             }
         }
-        return result;
+        return newArray;
     }
 
-    static void PrintMatrix(int[,] matrix)
+    static void PrintArray(int[,] array)
     {
-        for (int i = 0; i < 4; i++)
+        for (int i = 0; i < array.GetLength(0); i++)
         {
-            for (int j = 0; j < 4; j++)
+            for (int j = 0; j < array.GetLength(1); j++)
             {
-                Console.Write(matrix[i, j] + " ");
+                Console.Write(array[i, j] + "\t");
             }
             Console.WriteLine();
         }
