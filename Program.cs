@@ -4,7 +4,7 @@ class Program
 {
     static void Main()
     {
-        // Ініціалізація двох матриць
+        // Ініціалізація  матриць
         int[,] matrixA = {
             { 1, 15, 3, 4 },
             { 5, 6, 7, 8 },
@@ -19,12 +19,12 @@ class Program
             { 4, 3, 2, 1 }
         };
 
-        // Додавання матриць
+        // Додавання 
         int[,] sumMatrix = AddMatrices(matrixA, matrixB);
         Console.WriteLine("Сума матриць:");
         PrintMatrix(sumMatrix);
 
-        // Множення матриць
+        // Множення 
         int[,] productMatrix = MultiplyMatrices(matrixA, matrixB);
         Console.WriteLine("\nДобуток матриць:");
         PrintMatrix(productMatrix);
@@ -50,7 +50,7 @@ class Program
         {
             for (int j = 0; j < 4; j++)
             {
-                result[i, j] = 0; // Ініціалізація для накопичення
+                result[i, j] = 0; // Ініціалізація
                 for (int k = 0; k < 4; k++)
                 {
                     result[i, j] += a[i, k] * b[k, j];
