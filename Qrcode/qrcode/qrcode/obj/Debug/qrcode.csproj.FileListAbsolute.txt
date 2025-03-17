@@ -1,0 +1,9 @@
+C:\Users\krutj\source\repos\qrcode\qrcode\obj\Debug\qrcode.csproj.AssemblyReference.cache
+C:\Users\krutj\source\repos\qrcode\qrcode\obj\Debug\qrcode.csproj.CoreCompileInputs.cache
+C:\Users\krutj\source\repos\qrcode\qrcode\bin\Debug\qrcode.exe.config
+C:\Users\krutj\source\repos\qrcode\qrcode\bin\Debug\qrcode.exe
+C:\Users\krutj\source\repos\qrcode\qrcode\bin\Debug\qrcode.pdb
+C:\Users\krutj\source\repos\qrcode\qrcode\bin\Debug\QRCoder.dll
+C:\Users\krutj\source\repos\qrcode\qrcode\obj\Debug\qrcode.csproj.Up2Date
+C:\Users\krutj\source\repos\qrcode\qrcode\obj\Debug\qrcode.exe
+C:\Users\krutj\source\repos\qrcode\qrcode\obj\Debug\qrcode.pdb
